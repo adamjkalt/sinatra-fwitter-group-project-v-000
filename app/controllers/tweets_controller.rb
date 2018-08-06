@@ -41,7 +41,7 @@ require 'pry'
   get "/tweets/:id" do
       if logged_in?
         @tweet = Tweet.find_by_id(params[:id])
-        redirect to "/tweets/#{@tweet.id}"
+        erb :'/tweets/#{@tweet.id}'
       else
         redirect to "/login"
     end
