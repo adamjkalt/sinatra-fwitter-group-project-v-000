@@ -59,7 +59,7 @@ require 'pry'
         @tweet = Tweet.find_by_id(params[:id])
         @tweet.update(content: params[:content])
         @tweet.save
-        redirect("/tweets/#{@tweet.id}")
+        redirect("/tweets/#{@tweet.id}/edit")
       end
 
 
