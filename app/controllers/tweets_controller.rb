@@ -49,7 +49,7 @@ require 'pry'
   get '/tweet/:id/edit' do
     if logged_in?
        @tweet = Tweet.find(params[:id])
-       erb :'tweet/edit'
+       erb :'tweets/edit'
      else
        redirect to "/login"
      end
