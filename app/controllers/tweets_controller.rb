@@ -50,7 +50,7 @@ require 'pry'
     if logged_in?
       binding.pry
        @tweet = Tweet.find(params[:id])
-       erb :'tweets/edit'
+       erb :'tweets/:id/edit'
      else
        redirect to "/login"
      end
