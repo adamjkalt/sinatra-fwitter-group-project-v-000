@@ -47,9 +47,13 @@ require 'pry'
   end
 
   get '/tweet/:id/edit' do
+    if logged_in?
        @tweet = Tweet.find(params[:id])
        erb :'tweet/edit'
+     else
+       redirect to "/login"
      end
+    end
 
      patch '/tweet/:id' do
         @tweet = Tweet.find_by_id(params[:id])
