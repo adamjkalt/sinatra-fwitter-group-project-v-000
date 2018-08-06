@@ -61,6 +61,6 @@ require 'pry'
         @tweet.save
         redirect("/tweet/#{@tweet.id}")
       end
-      
+
 
 end
