@@ -6,7 +6,7 @@ require 'pry'
 
      if logged_in?
        @tweets = Tweet.all
-       erb :tweets/tweets
+       erb :'tweets/tweets'
      else
        redirect to '/login'
      end
