@@ -48,6 +48,7 @@ require 'pry'
 
   get '/tweet/:id/edit' do
     if logged_in?
+      binding.pry
        @tweet = Tweet.find(params[:id])
        erb :'tweets/edit'
      else
