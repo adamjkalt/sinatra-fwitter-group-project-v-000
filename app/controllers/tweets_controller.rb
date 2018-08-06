@@ -3,9 +3,10 @@ class TweetsController < ApplicationController
 require 'pry'
 
   get '/tweets' do
+
      if logged_in?
        @tweets = Tweet.all
-       redirect to '/tweets'
+       erb :tweets
      else
        redirect to '/login'
      end
