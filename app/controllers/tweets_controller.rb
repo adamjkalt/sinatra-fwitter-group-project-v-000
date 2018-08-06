@@ -55,7 +55,7 @@ require 'pry'
      end
     end
 
-     patch '/tweets/:id' do
+     patch '/tweets/:id/edit' do
         @tweet = Tweet.find_by_id(params[:id])
         @tweet.update(content: params[:content])
         @tweet.save
