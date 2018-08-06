@@ -10,8 +10,6 @@ class UsersController < ApplicationController
       redirect to 'tweets'
     else
         erb :'users/create_user'
-      else
-        redirect to '/signup'
       end
     end
 
