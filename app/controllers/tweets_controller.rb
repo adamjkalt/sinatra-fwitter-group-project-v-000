@@ -46,7 +46,7 @@ require 'pry'
     end
   end
 
-  get '/tweet/:id/edit' do
+  get '/tweets/:id/edit' do
     if logged_in?
        @tweet = Tweet.find(params[:id])
        erb :'tweets/edit'
