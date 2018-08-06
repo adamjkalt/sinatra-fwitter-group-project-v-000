@@ -52,6 +52,9 @@ require 'pry'
         if @tweet && @tweet.user == current_user
        erb :'tweets/edit'
      else
+     redirect to '/tweets'
+   end
+     else
        redirect to "/login"
      end
     end
