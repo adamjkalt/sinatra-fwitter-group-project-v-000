@@ -77,5 +77,5 @@ require 'pry'
            redirect to '/login'
          end
        end
-       
+
 end
