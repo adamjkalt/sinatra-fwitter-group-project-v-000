@@ -72,6 +72,9 @@ require 'pry'
            if @tweet && @tweet.user == current_user
              @tweet.delete
            redirect to '/tweets'
+          else
+            redirect to '/login'
+          end
          else
            redirect to '/login'
          end
